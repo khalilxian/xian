@@ -1,0 +1,10 @@
+任务要求：
+1. c/s 基本框架，tcp连接
+2. server 要求：多client 连接，每个client 的请求分别处理
+3. 交互数据格式：
+	version | type | len | value 
+
+	version ：  1bytes    交互协议版本，当前定义版本 1 
+	type ：     1 bytes   数据类型 ： 定义 4种不同的类型
+	len  ：	    2 bytes   类型数据长度：定义value的长度
+	value ：    n bytes   不同类型的数据内容，例如 4bytes 的整型，10字节的字符串， 1字节的char 长度数据内容
